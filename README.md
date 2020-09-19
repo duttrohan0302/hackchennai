@@ -33,7 +33,7 @@
       <p><b>Add a index.js file in config folder with the following</b></p>
       <div class="highlight highlight-source-shell" style="background-color:lightcyan">
         <pre>module.exports = {
-            mongoURI: "<your_mongoDB_Atlas_uri_with_credentials>",
+            mongoURI: "your_mongoDB_Atlas_uri_with_credentials",
           }</pre>
       </div>
       <p><b>Install server dependencies</b></p>
