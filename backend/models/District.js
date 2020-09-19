@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-require('mongoose-double')(mongoose);
+const Double = require('@mongoosejs/double');
 const Schema = mongoose.Schema;
 
 const DistrictSchema = new Schema({
@@ -12,7 +12,7 @@ const DistrictSchema = new Schema({
         required: true,
     },
     seroIndex: {
-        type: mongoose.Schema.Types.Double,
+        type: Double,
     },
     population: {
         type:Number,
@@ -61,6 +61,10 @@ const DistrictSchema = new Schema({
             type:Number,
             required: true
         }
-    }
+    },
+    // storageCapacity:{
+    //     type:Number,
+    //     required:true
+    // }
 })
 module.exports = District = mongoose.model("district", DistrictSchema);

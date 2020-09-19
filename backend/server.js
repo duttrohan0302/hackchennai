@@ -3,6 +3,7 @@ const app = require('express')();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const district = require('./routes/district');
 
 // Import DB URI
 const { mongoURI } = require('./config');
@@ -30,6 +31,8 @@ mongoose
 
     return res.json({message:"Hello"})
   })
+
+app.use('/',district);
 
 //Start Server
 app.listen(PORT, ()=>{
