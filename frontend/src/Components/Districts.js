@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react';
-import { Table } from 'reactstrap';
+import { Form, FormGroup, Input, Label, Table } from 'reactstrap';
 import { api } from '../Utils/api';
 import {history} from '../Helpers'
 
@@ -9,6 +9,7 @@ const Districts = () => {
     let content = <div>No districts loaded yet</div>
 
     const [districts,setDistricts] = useState(null);
+    const [sort,setSort] = useState(null);
     useEffect(()=> {
 
         const getDistricts = async () => {
@@ -20,10 +21,46 @@ const Districts = () => {
     const redirect = (name)=> {
         history.push(`/district/${name}`)
     }
+    const onChange = e => {
+        setSort(e.target.value)
+        console.log(e.target.value)
+        const val = e.target.value;
+
+        if(val==='profession'){
+            setDistricts(prevDistricts => prevDistricts.sort(function(a,b){return b.profession.medical_workers - a.profession.medical_workers}))
+        }else if(val==='age'){
+            setDistricts(prevDistricts => prevDistricts.sort(function(a,b){return (b.age.gt70 + b.age.lt12 - a.age.gt70 -a.age.lt12)}))
+        }else if(val==='seroIndex'){
+            setDistricts(prevDistricts => prevDistricts.sort(function(a,b){return a.seroIndex - b.seroIndex}))
+        }
+    } 
     if(districts){
         content = (
             <div className="m-10">
                 <h3 className="section-title text-center">District Data</h3>
+                <Form>
+                    <FormGroup tag="fieldset" >
+                        <legend>Priority</legend>
+                        <FormGroup check >
+                        <Label check >
+                            <Input type="radio" name="radio1" value="age" onChange={onChange}/>{' '}
+                            Age {"(Priority to < 12 and > 70 years)"}
+                        </Label>
+                        </FormGroup>
+                        <FormGroup check >
+                        <Label check >
+                            <Input type="radio" name="radio1" value="profession" onChange={onChange}/>{' '}
+                            Profession
+                        </Label>
+                        </FormGroup>
+                        <FormGroup check>
+                        <Label check>
+                            <Input type="radio" name="radio1" value="seroIndex" onChange={onChange} />{' '}
+                            Sero Index
+                        </Label>
+                        </FormGroup>
+                    </FormGroup>
+                </Form>
                 <Table striped bordered>
                     <thead>
                         <tr>
@@ -47,7 +84,7 @@ const Districts = () => {
                     <tbody>
                         {
                             districts.map((district,index) => (
-                                <tr key={index} onClick={()=>redirect(district.name)}>
+                                <tr key={index} onClick={()=>redirect(district.name)} className={index===0 ? 'bg-danger text-white' : ''}>
                                     <th scope="row">{index+1}</th>
                                     <td>{district.name}</td>
                                     <td>{district.state}</td>
@@ -62,7 +99,7 @@ const Districts = () => {
                                     <td>{district.profession.non_worker}</td>
                                     <td>{district.profession.others}</td>
                                     <td>{district.population}</td>
-                                    <td>{district.seroIndex}</td>
+                                    <td className={district.seroIndex<=0.35 ? 'bg-warning text-danger' : ''}>{district.seroIndex}</td>
 
                                 </tr>
                             ))

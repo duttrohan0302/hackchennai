@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from 'react';
+import axios from 'axios';
 import { api } from '../Utils/api';
 import {Line, HorizontalBar,Bar} from 'react-chartjs-2';
 import _ from  'underscore';
@@ -13,6 +14,7 @@ const DashBoard = () => {
             setDistricts(dis.data)
         }
         getDistricts()
+
     },[])
     console.log(districts)
     const seroIndexData = {
