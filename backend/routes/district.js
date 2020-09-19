@@ -90,4 +90,16 @@ router.get('/districts',async (req,res,next)=> {
     }
 })
 
+router.get('/district/:name',async (req,res,next)=> {
+
+    try{
+        const name = req.params.name;
+        const district = await District.find({name:name})
+        return res.status(200).json(district)
+    }catch(e){
+        console.log(e)
+        return res.status(400).json(e)
+    }
+})
+
 module.exports = router

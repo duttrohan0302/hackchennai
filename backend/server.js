@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const district = require('./routes/district');
-
+const data = require('./config/db.json')
+console.log(data)
 // Import DB URI
 const { mongoURI } = require('./config');
 
