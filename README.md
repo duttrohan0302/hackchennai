@@ -1,4 +1,3 @@
-## Github Repo for Team Code Bandits
 <html lang="en">
   <head>
 <!--     <title>
@@ -41,20 +40,21 @@
       <div class="highlight highlight-source-shell" style="background-color:lightcyan">
         <p>In the root directory run</p>
         <pre>cd backend && npm install</pre>
-        <pre>npm run dev</pre> for running the backend
+        <pre>npm run dev</pre>
       </div>
       <p><b>Install client dependencies</b></p>
       <div class="highlight highlight-source-shell" style="background-color:lightcyan">
       <p>In the root directory run</p>
         <pre>cd frontend && npm install</pre>
-        <pre>npm start</pre> for running the frontend
+        <pre>npm start</pre>
       </div>
        <h4>Authors and Acknowledgement</h4>
       <div class="highlight highlight-source-shell" style="background-color:lightcyan">
-        <pre>This application has been made by the following team</pre>
-        <p>Rohan Dutt</p>
-        <p>Nitish Jain</p>
-        <p>Vishal Gulati</p>
+        <pre>This application has been made by the following team
+        Rohan Dutt
+        Nitish Jain
+        Vishal Gulati
+        </pre>
       </div>
     </div>
 
