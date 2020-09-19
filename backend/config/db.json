@@ -1,0 +1,254 @@
+[{
+  "_id": {
+    "$oid": "5f65dd441f902d6f20fb51a5"
+  },
+  "name": "Pune",
+  "state": "Maharashtra",
+  "seroIndex": 0.515,
+  "population": 4947,
+  "profession": {
+    "non_worker": 500,
+    "medical_workers": 1000,
+    "police_frontline": 1500,
+    "armed_forces": 947,
+    "others": 1000
+  },
+  "age": {
+    "lt12": 1100,
+    "btwn12_30": 2100,
+    "btwn30_50": 1400,
+    "bwtn50_70": 112,
+    "gt70": 97
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f65dde6bb9fc63c7499d3d3"
+  },
+  "name": "Agra",
+  "state": "Uttar Pradesh",
+  "seroIndex": 0.43,
+  "population": 6000,
+  "profession": {
+    "non_worker": 1200,
+    "medical_workers": 1500,
+    "police_frontline": 1800,
+    "armed_forces": 400,
+    "others": 7
+  },
+  "age": {
+    "lt12": 400,
+    "btwn12_30": 2800,
+    "btwn30_50": 2100,
+    "bwtn50_70": 0,
+    "gt70": 300
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f65e5410f064340305ad825"
+  },
+  "name": "Bareilly",
+  "state": "Uttar Pradesh",
+  "seroIndex": 0.4,
+  "population": 3000,
+  "profession": {
+    "non_worker": 700,
+    "medical_workers": 900,
+    "police_frontline": 1000,
+    "armed_forces": 300,
+    "others": 523
+  },
+  "age": {
+    "lt12": 120,
+    "btwn12_30": 1400,
+    "btwn30_50": 1200,
+    "bwtn50_70": 300,
+    "gt70": 100
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f65e73afef5a06ae04f5669"
+  },
+  "name": "New Delhi",
+  "state": "New Delhi",
+  "seroIndex": 0.33,
+  "population": 160000,
+  "profession": {
+    "non_worker": 1200,
+    "medical_workers": 6900,
+    "police_frontline": 5800,
+    "armed_forces": 2500,
+    "others": 1210
+  },
+  "age": {
+    "lt12": 1200,
+    "btwn12_30": 6500,
+    "btwn30_50": 5400,
+    "bwtn50_70": 3500,
+    "gt70": 210
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f6609aee1a70d3854492853"
+  },
+  "name": "Ludhiana",
+  "state": "Punjab",
+  "seroIndex": 0.7,
+  "population": 10000,
+  "profession": {
+    "non_worker": 1100,
+    "medical_workers": 4550,
+    "police_frontline": 3559,
+    "armed_forces": 1200,
+    "others": 2100
+  },
+  "age": {
+    "lt12": 1100,
+    "btwn12_30": 3600,
+    "btwn30_50": 3200,
+    "bwtn50_70": 1900,
+    "gt70": 70
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f6624bae1a70d3854492854"
+  },
+  "name": "Mumbai",
+  "state": "Maharasthra",
+  "seroIndex": 0.33,
+  "population": 13000,
+  "profession": {
+    "non_worker": 170,
+    "medical_workers": 2110,
+    "police_frontline": 3267,
+    "armed_forces": 1200,
+    "others": 6123
+  },
+  "age": {
+    "lt12": 1000,
+    "btwn12_30": 6000,
+    "btwn30_50": 4500,
+    "bwtn50_70": 1000,
+    "gt70": 500
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f662c9070a4ad1e5c74d6e9"
+  },
+  "name": "Chennai",
+  "state": "Tamil Nadu",
+  "seroIndex": 0.2,
+  "population": 7428,
+  "profession": {
+    "non_worker": 1000,
+    "medical_workers": 1100,
+    "police_frontline": 2000,
+    "armed_forces": 457,
+    "others": 4000
+  },
+  "age": {
+    "lt12": 1600,
+    "btwn12_30": 2700,
+    "btwn30_50": 1100,
+    "bwtn50_70": 456,
+    "gt70": 49
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f66300a70a4ad1e5c74d6ea"
+  },
+  "name": "Ahemdabad",
+  "state": "Gujarat",
+  "seroIndex": 0.415,
+  "population": 5784,
+  "profession": {
+    "non_worker": 428,
+    "medical_workers": 1200,
+    "police_frontline": 1260,
+    "armed_forces": 450,
+    "others": 1200
+  },
+  "age": {
+    "lt12": 498,
+    "btwn12_30": 2600,
+    "btwn30_50": 1200,
+    "bwtn50_70": 800,
+    "gt70": 80
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f66300a70a4ad1e5c74d6eb"
+  },
+  "name": "Indore",
+  "state": "Madhya Pradesh",
+  "seroIndex": 0.75,
+  "population": 7750,
+  "profession": {
+    "non_worker": 547,
+    "medical_workers": 2600,
+    "police_frontline": 2270,
+    "armed_forces": 1200,
+    "others": 900
+  },
+  "age": {
+    "lt12": 1100,
+    "btwn12_30": 3100,
+    "btwn30_50": 2400,
+    "bwtn50_70": 500,
+    "gt70": 247
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f66300a70a4ad1e5c74d6ec"
+  },
+  "name": "Jaipur",
+  "state": "Rajasthan",
+  "seroIndex": 0.6,
+  "population": 10700,
+  "profession": {
+    "non_worker": 1100,
+    "medical_workers": 4300,
+    "police_frontline": 3500,
+    "armed_forces": 800,
+    "others": 1200
+  },
+  "age": {
+    "lt12": 2200,
+    "btwn12_30": 4100,
+    "btwn30_50": 3400,
+    "bwtn50_70": 912,
+    "gt70": 1400
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f66300a70a4ad1e5c74d6ed"
+  },
+  "name": "Jodhpur",
+  "state": "Rajasthan",
+  "seroIndex": 0.4,
+  "population": 7042,
+  "profession": {
+    "non_worker": 310,
+    "medical_workers": 2700,
+    "police_frontline": 2400,
+    "armed_forces": 1200,
+    "others": 2000
+  },
+  "age": {
+    "lt12": 1200,
+    "btwn12_30": 2400,
+    "btwn30_50": 2000,
+    "bwtn50_70": 900,
+    "gt70": 70
+  },
+  "__v": 0
+}]
