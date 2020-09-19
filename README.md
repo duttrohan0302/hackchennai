@@ -9,7 +9,7 @@
     />
   </head>
   <body>
-    <h1>Code Bandits</h1> presents
+    <h1>Code Bandits</h1>
     <blockquote>
       <p class="mb-2" style="font-size: 20px;">
         Tackling the requirements of 135 crores
