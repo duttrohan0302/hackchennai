@@ -4,8 +4,9 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const district = require('./routes/district');
-const data = require('./config/db.json')
-console.log(data)
+// const data = require('./config/db.json')
+// console.log(data)
+const user = require('./routes/user');
 // Import DB URI
 const { mongoURI } = require('./config');
 
@@ -34,6 +35,8 @@ mongoose
   })
 
 app.use('/',district);
+app.use('/',user);
+
 
 //Start Server
 app.listen(PORT, ()=>{
