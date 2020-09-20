@@ -1,5 +1,8 @@
 import React,{ useState } from 'react';
 import { useLocation } from 'react-router';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { Link }from 'react-router-dom'
 
 import {
   Collapse,
@@ -9,6 +12,7 @@ import {
   Nav,
   NavItem,
   NavLink,
+  NavbarText,
   Form,
   Button,
   FormGroup,
@@ -16,8 +20,10 @@ import {
 } from 'reactstrap';
 
 import {history} from '../Helpers'
+import { logout } from '../Actions/authActions'
 
-const NavBar = (props) => {
+const NavBar = ({isAuthenticated,user,logout}) => {
+  // console.log(user,isAuthenticated)
 
   const {pathname} = useLocation();
 
@@ -42,7 +48,18 @@ const NavBar = (props) => {
             <NavItem>
               <NavLink href="/dashboard"  className={pathname==='/dashboard' ? 'text-white' : ''}>Dashboard</NavLink>
             </NavItem>
+            
+            
           </Nav>
+          <NavbarText className="text-center">
+            {
+              isAuthenticated && user &&
+              <Button color="info" disabled>
+                Hi {user.name}!
+              </Button>
+            }
+            
+            </NavbarText>
           <Form inline className="ml-auto" onSubmit={onSubmit}>
             <FormGroup className="mr-5">
               <Input 
@@ -53,11 +70,41 @@ const NavBar = (props) => {
               <Button color="info" className="mt-auto">Search</Button>
             </FormGroup>
           </Form>
+          <NavbarText>
+            {
+              isAuthenticated ?
+              <Button onClick={logout} color="danger">
+                <i className="fa fa-sign-out" aria-hidden="true"></i>
+                  Logout
+              </Button>
+              :
+              <Link to="/login">
+                <Button color="success">
+                  <i className="fa fa-sign-in" aria-hidden="true"></i>
+                    Login
+                </Button>
+              </Link>
+            }
+            
+          </NavbarText>
         </Collapse>
       </Navbar>
     </div>
   );
 }
 
+NavBar.propTypes = {
+  auth: PropTypes.object.isRequired,
+  isAuthenticated: PropTypes.bool,
+  user: PropTypes.object,
+  logout: PropTypes.func
+};
 
-export default NavBar;
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+  isAuthenticated: state.auth.isAuthenticated,
+  user: state.auth.user,
+});
+
+
+export default connect(mapStateToProps,{logout})(NavBar);
