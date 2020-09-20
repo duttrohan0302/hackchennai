@@ -1,7 +1,8 @@
 import React,{useEffect,useState} from 'react';
-import { api } from '../Utils/api';
+import api from '../Utils/api';
 import {history} from '../Helpers'
 import {Doughnut,Pie} from 'react-chartjs-2';
+import { connect } from 'react-redux';
 
 const ParticularDistrict = (props) => {
 
@@ -95,5 +96,4 @@ const ParticularDistrict = (props) => {
 
 
 }
-
-export default ParticularDistrict;
+export default connect()(ParticularDistrict);
