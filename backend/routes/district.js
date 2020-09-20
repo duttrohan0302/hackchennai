@@ -4,7 +4,9 @@ const router = express.Router()
 
 // Import Models
 const District = require('../models/District')
-
+//Import and require Passport
+// const passport = require("passport");
+// require("./../middlewares/passport")(passport);
 router.post('/district',async (req,res,next) => {
 
     try{
