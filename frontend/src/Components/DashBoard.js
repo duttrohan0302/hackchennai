@@ -1,8 +1,10 @@
 import React,{useEffect,useState} from 'react';
 import axios from 'axios';
-import { api } from '../Utils/api';
+import api from '../Utils/api';
 import {Line, HorizontalBar,Bar} from 'react-chartjs-2';
 import _ from  'underscore';
+
+import { connect } from 'react-redux';
 const DashBoard = () => {
 
     let content = <div>No Districts loaded yet</div>
@@ -111,4 +113,4 @@ const DashBoard = () => {
 }
 
 
-export default DashBoard;
+export default connect()(DashBoard);
