@@ -1,8 +1,9 @@
 import React,{useEffect,useState} from 'react';
 import { Form, FormGroup, Input, Label, Table } from 'reactstrap';
-import { api } from '../Utils/api';
+import api from '../Utils/api';
 import {history} from '../Helpers'
 
+import { connect } from 'react-redux';
 
 const Districts = () => {
 
@@ -116,5 +117,4 @@ const Districts = () => {
     )
 }
 
-
-export default Districts;
+export default connect()(Districts);
