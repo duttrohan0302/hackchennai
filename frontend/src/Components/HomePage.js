@@ -1,7 +1,8 @@
 import React,{ useCallback,useState } from 'react';
 import { Form, FormGroup, Label, Input, FormText, Button, UncontrolledAlert } from 'reactstrap';
 import {useDropzone} from 'react-dropzone';
-import {api} from '../Utils/api'
+import api from '../Utils/api'
+import { connect } from 'react-redux';
 const csv=require('csvtojson')
 
 const HomePage =  ()  => {
@@ -119,5 +120,4 @@ const HomePage =  ()  => {
     )
 
 }
-
-export default HomePage;
+export default connect()(HomePage);
