@@ -52,8 +52,8 @@
       <div class="highlight highlight-source-shell" style="background-color:lightcyan">
         <pre>This application has been made by the following team
         Rohan Dutt
-        Nitish Jain
         Vishal Gulati
+        Nitish Jain
         </pre>
       </div>
     </div>
