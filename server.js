@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const district = require('./routes/district');
 const user = require('./routes/user');
+const path = require("path")
 // const data = require('./config/db.json')
 // console.log(data)
 // Import DB URI
@@ -32,13 +33,19 @@ mongoose
   .then(() => console.log("Mongoose Connected"))
   .catch((err) => console.log(err));
 
-  app.get('/',(req,res) =>{
 
-    return res.json({message:"Hello"})
-  })
 
 app.use('/',district);
 app.use('/',user);
+
+if (process.env.NODE_ENV === "production") {
+  // Set Static folder
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
 
 //Start Server
 app.listen(PORT, ()=>{
