@@ -1,15 +1,12 @@
 <html lang="en">
   <head>
-<!--     <title>
-      Dev Connector: Today's Social Network for tomorrow's Developers
-    </title> -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
   </head>
   <body>
-    <h1>Code Bandits</h1>
+    <h1>NGO-DISTRICT-DATA</h1>
     <blockquote>
       <p class="mb-2" style="font-size: 20px;">
         Tackling the requirements of 135 crores
@@ -30,31 +27,21 @@
           >🚀</g-emoji
         >
       </h3>
-      <p><b>Add a index.js file in config folder with the following</b></p>
+      <p><b>Add a .env file in config folder with the following</b></p>
       <div class="highlight highlight-source-shell" style="background-color:lightcyan">
-        <pre>module.exports = {
-            mongoURI: "your_mongoDB_Atlas_uri_with_credentials",
-          }</pre>
+        <pre>
+          MONGO_URI="your mongodb uri"
+          SECRETORKEY="ngo-district-data"
+        </pre>
       </div>
-      <p><b>Install server dependencies</b></p>
+      <p><b>Install dependencies</b></p>
       <div class="highlight highlight-source-shell" style="background-color:lightcyan">
-        <p>In the root directory run</p>
-        <pre>cd backend && npm install</pre>
-        <pre>npm run dev</pre>
+        <p>In the root directory run the following command</p>
+        <pre>npm install && npm run client-install</pre>
       </div>
-      <p><b>Install client dependencies</b></p>
       <div class="highlight highlight-source-shell" style="background-color:lightcyan">
       <p>In the root directory run</p>
-        <pre>cd frontend && npm install</pre>
-        <pre>npm start</pre>
-      </div>
-       <h4>Authors and Acknowledgement</h4>
-      <div class="highlight highlight-source-shell" style="background-color:lightcyan">
-        <pre>This application has been made by the following team
-        Rohan Dutt
-        Nitish Jain
-        Vishal Gulati
-        </pre>
+        <pre>npm run dev</pre>
       </div>
     </div>
 
