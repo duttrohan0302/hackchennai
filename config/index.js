@@ -1,6 +1,6 @@
 module.exports = {
     mongoURI: process.env.MONGO_URI,
-    frontendURL: process.env.NODE_ENV==="development" ? "http://localhost:3000" : "", // Enter production url when in production,
+    frontendURL: process.env.NODE_ENV==="development" ? "http://localhost:3000" : "https://ngo-districtdata.herokuapp.com", // Enter production url when in production,
     secretOrKey: process.env.SECRETORKEY
 }
 
