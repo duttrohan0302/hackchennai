@@ -21,6 +21,7 @@ import {
 import { logout } from '../Actions/authActions'
 
 import {history} from '../Helpers'
+import { logout } from '../Actions/authActions'
 
 const NavBar = ({isAuthenticated,user,logout}) => {
 
