@@ -18,8 +18,6 @@ import {
   Input
 } from 'reactstrap';
 
-import { logout } from '../Actions/authActions'
-
 import {history} from '../Helpers'
 import { logout } from '../Actions/authActions'
 

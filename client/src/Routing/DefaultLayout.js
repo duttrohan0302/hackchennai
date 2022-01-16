@@ -3,7 +3,6 @@ import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Alert from '../Components/Alert'
 import NavBar from '../Components/NavBar';
-import Alert from '../Components/Alert';
 
 
 const DefaultLayout = ({children}) => {

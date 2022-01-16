@@ -78,13 +78,13 @@ const ParticularDistrict = (props) => {
             </span>
             <h3 className="display-4 text-center">{district.name}</h3>
             {/* <span className="float float-right">{district.population}</span> */}
-            <div style={{width:'800px',display:'inline-block'}}>
+            <div style={{width:'700px',display:'inline-block'}}>
                 <h4 className="text-center">Age Distribution</h4>
                 <Doughnut 
                     data = {ageData}
                 />
             </div>  
-            <div style={{width:'800px',display:'inline-block'}}>
+            <div style={{width:'700px',display:'inline-block'}}>
                 <h4 className="text-center">Profession</h4>
                 <Pie 
                     data = {professionData}

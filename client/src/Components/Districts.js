@@ -2,8 +2,6 @@ import React,{useEffect,useState} from 'react';
 import { Form, FormGroup, Input, Label, Table } from 'reactstrap';
 import api from '../Utils/api';
 import {history} from '../Helpers'
-import { connect } from "react-redux";
-
 import { connect } from 'react-redux';
 
 const Districts = () => {
